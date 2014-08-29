@@ -1,0 +1,15 @@
+$layout_tiny: "only screen and (max-width: 400px)";
+$layout_tiny_height: "only screen and (max-height: 420px)";
+
+$layout_large: "only screen and (min-width:600px)";
+$layout_big: "only screen and (min-width:720px)";
+$layout_titan: "only screen and (min-width:960px)";
+
+$nexus7: "only screen and (min-width:601px) and (device-width:601px) and (max-width:601px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1.3312500715255737) and (device-aspect-ratio:601/906)";
+$nexus7_hdpi: "only screen and (min-width: 600px) and (device-width: 600px) and (max-width: 600px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) and (device-aspect-ratio: 25/38)";
+
+@mixin use-query($query) {
+	@media #{$query} {
+		@content;
+	}
+}
