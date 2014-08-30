@@ -10,7 +10,6 @@
 
 html {
 	height: 100%;
-	overflow: hidden;
 }
 
 body {
@@ -18,10 +17,83 @@ body {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	overflow: hidden;
 }
 
 * {
 
     @include box-sizing(border-box);
+}
+
+.correct {
+	$color = rgba(green, 0.1);
+
+	background-color: $color;
+}
+
+.question {
+	width: (1/4 * 100%);
+	float: left;
+	padding: 20px 1% 20px 1%;
+	border-bottom: 1px solid #eee;
+	border-right: 1px solid #eee;
+
+	&:nth-child(4) {
+		border-right: 0;
+	}
+}
+
+.question input {
+	width: 100%;
+	display: block;
+	outline: none;
+	border-radius: 5px;
+	padding: 4px 4px;
+	border: 1px solid #ccc;
+
+	&:focus {
+		border: 1px solid rgba(#2C67A2, 0.4);
+		box-shadow: 0 0 5px rgba(#2C67A2, 0.75);
+	}
+}
+
+.stats-bar {
+	padding: 10px 10px;
+	background-color: #2C67A2;
+	color: #fff;
+	@include clearfix();
+	position: fixed;
+	width: 100%;
+
+	h1 {
+		float: left;
+		font-size: 22px;
+		line-height: 27px;
+		margin: 0;
+		padding: 0;
+		font-weight: normal;
+	}
+}
+
+.questions {
+	padding-top: 47px;
+}
+
+.equation {
+	margin-bottom: 5px;
+	display: block;
+	.value {
+
+	}
+}
+
+.stat {
+	background-color: lighten(#2C67A2, 10%);
+	border: 1px solid darken(#2C67A2, 10%);
+	box-shadow: 0 1px 0 lighten(#2C67A2, 20%);
+	padding: 5px 10px;
+	font-size: 13px;
+	border-radius: 3px;
+	display: block;
+	float: right;
+	margin-right: 10px;
 }
