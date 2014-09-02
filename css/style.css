@@ -416,6 +416,49 @@ body {
   margin-bottom: 5px;
   display: block; }
 
+.button {
+  background-color: #00b300;
+  border: 1px solid #004d00;
+  box-shadow: 0 1px 0 #009a00;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 3px;
+  display: block;
+  float: right;
+  margin-right: 10px;
+  position: relative; }
+  .button .popover {
+    position: absolute;
+    right: 0;
+    top: 48px;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    background-color: #d8e7f5;
+    border: 1px solid #2C67A2;
+    color: #2C67A2;
+    border-radius: 3px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    display: block; }
+    .button .popover label {
+      display: block;
+      margin-bottom: 5px; }
+    .button .popover button {
+      display: block;
+      width: 100%;
+      padding: 10px 0; }
+    .button .popover:after {
+      position: absolute;
+      top: -8px;
+      right: 24px;
+      height: 0;
+      width: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #2c67a2;
+      display: block;
+      content: ''; }
+
 .stat {
   background-color: #3880c9;
   border: 1px solid #214d7a;

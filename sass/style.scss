@@ -25,7 +25,7 @@ body {
 }
 
 .correct {
-	$color = rgba(green, 0.1);
+	$color: rgba(green, 0.1);
 
 	background-color: $color;
 }
@@ -84,6 +84,58 @@ body {
 	.value {
 
 	}
+}
+
+.button {
+  background-color: lighten(green, 10%);
+  border: 1px solid darken(green, 10%);
+  box-shadow: 0 1px 0 lighten(green, 5%);
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 3px;
+  display: block;
+  float: right;
+  margin-right: 10px;
+  position: relative;
+  
+  .popover {
+    position: absolute;
+    right: 0;
+    top: 48px;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    background-color: lighten(#2C67A2, 50%);
+    border: 1px solid #2C67A2;
+    color: #2C67A2;
+    border-radius: 3px;
+    box-shadow: 0 3px 3px rgba(#000, .1);
+    display: block;
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+    } 
+    
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px 0;
+    }
+    
+    &:after {
+      position: absolute;
+      top: -8px;
+      right: 24px;
+      @include triangle(16px, #2C67A2, up);
+      display: block;
+      content: '';
+    } 
+    
+    .popover-wrapper {
+      
+    } 
+  }
 }
 
 .stat {

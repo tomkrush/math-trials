@@ -15,6 +15,19 @@
 	<body ng-controller="MathController as mathCtrl">
 		<section class="stats-bar">
 			<h1>Math Trials</h1>
+            <div class="button">
+              <span class="label" ng-click="popoverToggle()">Difficulty</span>
+              <div class="popover" ng-show="popoverVisible()">
+                <div class="popover-wrapper">
+                  <label>
+                    <span class="label">Max</span>
+                    <input type="number" ng-model="max" /> 
+                  </label>
+                  
+                  <button ng-click="generate()">Generate</button>
+                </div>
+              </div>
+            </div>
 			<span class="stat">Number of Questions: {{questions.length}}</span>
 			<span class="stat">Number of Correct Answers: {{correct}}</span>
 		</section>
